@@ -4,13 +4,25 @@ Created on Fri Oct 21 08:36:41 2016
 
 @author: Thomas
 """
+"""
+This script defines three functions with the same purpose, create an acronym from a script.
+- for loop
+- list comprehension
+- map function
 
+The randomTester function takes a list of functions as argument, it generates random strings and makes sure that the 3 functions
+return the same acronym.
+"""
 
 #### Import modules
 import re
 import random
 
 ######## 3 ways to create acronyms
+
+#### Takes a string keep the first letter and turn it into upper case
+def makeAcronym(expression):    
+    return expression[0].upper()
 
 #### map makeAcronym function to a list of strings
 def acronymize(list_of_strings):
@@ -28,10 +40,6 @@ def DaveAcronymization(splitted_string):
          mylist.append(makeAcronym(each_word))
 
     return mylist  
-   
-#### Takes a string keep the first letter and turn it into upper case
-def makeAcronym(expression):    
-    return expression[0].upper()
     
 #### concatenates a list of strings into a string    
 def concatenate(mylist):
@@ -66,6 +74,7 @@ func_to_test = [acronymize, acronymize2, DaveAcronymization]
 
 expected = ['FS1', 'S','RWOTT']  
 
+#### Test that for each funciton, actual output is equal to the expected output
 def functionTest(func_to_test, expected):
     
     for i in range(len(func_to_test)):    
