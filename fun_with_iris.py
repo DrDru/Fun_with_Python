@@ -77,17 +77,3 @@ iris = pd.merge(left = iris,
                 
 #### That is super convenient !
 del grouped, grouped_mean
-
-
-
-
-
-
-
-
-
-
-
-
-
-                      
